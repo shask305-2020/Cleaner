@@ -16,5 +16,17 @@ namespace ChimChi
         {
             InitializeComponent();
         }
+
+        private void btnAuth_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+            this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -19,7 +19,24 @@ namespace ChimChi
 
         private void btnExit1_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.Show();
+        }
+
+        private void btnNewOrder_Click(object sender, EventArgs e)
+        {
+            NewOrder newOrder = new NewOrder();
+            newOrder.Show();
         }
     }
 }

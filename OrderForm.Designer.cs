@@ -31,46 +31,39 @@ namespace ChimChi
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnExit2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 10);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(1031, 379);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(882, 502);
+            this.btnBack.Location = new System.Drawing.Point(924, 400);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(133, 58);
+            this.btnBack.Size = new System.Drawing.Size(118, 46);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnExit2
-            // 
-            this.btnExit2.Location = new System.Drawing.Point(1021, 502);
-            this.btnExit2.Name = "btnExit2";
-            this.btnExit2.Size = new System.Drawing.Size(133, 58);
-            this.btnExit2.TabIndex = 1;
-            this.btnExit2.Text = "Выход";
-            this.btnExit2.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 571);
-            this.Controls.Add(this.btnExit2);
+            this.ClientSize = new System.Drawing.Size(1052, 457);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderForm";
             this.Text = "Оформленные заказы";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -82,6 +75,5 @@ namespace ChimChi
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnExit2;
     }
 }
