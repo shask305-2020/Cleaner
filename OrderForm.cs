@@ -19,7 +19,7 @@ namespace ChimChi
         }
         
         DataSet set = new DataSet();
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repos\ChimChi\Cleaner.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
         string command = (@"");     //команда для выбора заказов
 
         private void Zapolnenie(String table)

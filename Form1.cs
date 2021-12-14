@@ -20,7 +20,7 @@ namespace ChimChi
 
         private void btnAuth_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\repos\ChimChi\Cleaner.mdf;Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT Role FROM Login WHERE Username='" + txtLogin.Text + "' AND Password='" + txtPass.Text + "' ", connection);
             DataTable table = new DataTable();
             adapter.Fill(table);

@@ -41,9 +41,9 @@ namespace ChimChi
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(26, 27);
+            this.label1.Location = new System.Drawing.Point(29, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(83, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Логин";
             // 
@@ -51,36 +51,37 @@ namespace ChimChi
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(26, 78);
+            this.label2.Location = new System.Drawing.Point(29, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(99, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Пароль";
             // 
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtLogin.Location = new System.Drawing.Point(118, 25);
+            this.txtLogin.Location = new System.Drawing.Point(133, 31);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(317, 30);
+            this.txtLogin.Size = new System.Drawing.Size(356, 35);
             this.txtLogin.TabIndex = 1;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPass.Location = new System.Drawing.Point(119, 76);
+            this.txtPass.Location = new System.Drawing.Point(134, 95);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(317, 30);
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(356, 35);
             this.txtPass.TabIndex = 1;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(40, 146);
+            this.btnExit.Location = new System.Drawing.Point(45, 182);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(137, 57);
+            this.btnExit.Size = new System.Drawing.Size(154, 71);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -88,10 +89,10 @@ namespace ChimChi
             // 
             // btnAuth
             // 
-            this.btnAuth.Location = new System.Drawing.Point(334, 146);
+            this.btnAuth.Location = new System.Drawing.Point(376, 182);
             this.btnAuth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAuth.Name = "btnAuth";
-            this.btnAuth.Size = new System.Drawing.Size(137, 57);
+            this.btnAuth.Size = new System.Drawing.Size(154, 71);
             this.btnAuth.TabIndex = 2;
             this.btnAuth.Text = "Авторизация";
             this.btnAuth.UseVisualStyleBackColor = true;
@@ -99,9 +100,9 @@ namespace ChimChi
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 232);
+            this.ClientSize = new System.Drawing.Size(569, 290);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnAuth);
