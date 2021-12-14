@@ -24,8 +24,11 @@ namespace ChimChi
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT RealName FROM Login WHERE Username='" + txtLogin.Text + "' AND Password='" + txtPass.Text + "' ", connection);
             DataTable table = new DataTable();
+            DataSet data = new DataSet();
+            adapter.Fill(data);
             adapter.Fill(table);
-            realName = "";
+
+            realName = "Пользователь";
 
             if (table.Rows.Count == 1)
             {

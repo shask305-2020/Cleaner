@@ -16,11 +16,21 @@ namespace ChimChi
         public OrderForm()
         {
             InitializeComponent();
+            TableView();
         }
         
         DataSet set = new DataSet();
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
-        string command = (@"");     //команда для выбора заказов
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
+        string com = (@"SELECT * FROM Order");     //команда для выбора заказов
+        
+
+        private void TableView()
+        {
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(com, con);
+            adapter.Fill(set);
+            dataGridView1.DataSource = set.Tables[0];
+        }
 
         private void Zapolnenie(String table)
         {
