@@ -138,7 +138,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Cleaner.mdf</DependentUpon>
     </Content>
+    <Content Include="TableCategory.sql" />
     <Content Include="TableLogin.sql" />
+    <Content Include="TableOrder.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

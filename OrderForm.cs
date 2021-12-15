@@ -30,6 +30,7 @@ namespace ChimChi
             SqlDataAdapter adapter = new SqlDataAdapter(com, con);
             adapter.Fill(set);
             dataGridView1.DataSource = set.Tables[0];
+            con.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

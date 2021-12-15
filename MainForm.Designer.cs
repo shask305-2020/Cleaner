@@ -37,10 +37,10 @@ namespace ChimChi
             // 
             // btnExit1
             // 
-            this.btnExit1.Location = new System.Drawing.Point(284, 223);
+            this.btnExit1.Location = new System.Drawing.Point(320, 279);
             this.btnExit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit1.Name = "btnExit1";
-            this.btnExit1.Size = new System.Drawing.Size(102, 44);
+            this.btnExit1.Size = new System.Drawing.Size(115, 55);
             this.btnExit1.TabIndex = 0;
             this.btnExit1.Text = "Выход";
             this.btnExit1.UseVisualStyleBackColor = true;
@@ -48,10 +48,10 @@ namespace ChimChi
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(39, 104);
+            this.btnOrder.Location = new System.Drawing.Point(44, 130);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(214, 72);
+            this.btnOrder.Size = new System.Drawing.Size(241, 90);
             this.btnOrder.TabIndex = 1;
             this.btnOrder.Text = "Оформленные заказы";
             this.btnOrder.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@ namespace ChimChi
             // 
             // btnNewOrder
             // 
-            this.btnNewOrder.Location = new System.Drawing.Point(446, 104);
+            this.btnNewOrder.Location = new System.Drawing.Point(502, 130);
             this.btnNewOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNewOrder.Name = "btnNewOrder";
-            this.btnNewOrder.Size = new System.Drawing.Size(214, 72);
+            this.btnNewOrder.Size = new System.Drawing.Size(241, 90);
             this.btnNewOrder.TabIndex = 2;
             this.btnNewOrder.Text = "Новый заказ";
             this.btnNewOrder.UseVisualStyleBackColor = true;
@@ -72,17 +72,17 @@ namespace ChimChi
             // 
             this.UserName.AutoSize = true;
             this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserName.Location = new System.Drawing.Point(293, 36);
+            this.UserName.Location = new System.Drawing.Point(38, 30);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(79, 29);
+            this.UserName.Size = new System.Drawing.Size(203, 32);
             this.UserName.TabIndex = 3;
-            this.UserName.Text = "label1";
+            this.UserName.Text = "Пользователь";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 296);
+            this.ClientSize = new System.Drawing.Size(800, 370);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.btnNewOrder);
             this.Controls.Add(this.btnOrder);
