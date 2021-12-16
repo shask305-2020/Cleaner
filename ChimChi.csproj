@@ -157,6 +157,8 @@
     <Content Include="TableCategory.sql" />
     <Content Include="TableLogin.sql" />
     <Content Include="TableOrder.sql" />
+    <Content Include="TableProduct.sql" />
+    <Content Include="TableService.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
