@@ -52,5 +52,23 @@ namespace ChimChi
 
             }
         }
+
+        private void NewOrder_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cleanerDataSet.Service". При необходимости она может быть перемещена или удалена.
+            this.serviceTableAdapter.Fill(this.cleanerDataSet.Service);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cleanerDataSet.Product". При необходимости она может быть перемещена или удалена.
+            this.productTableAdapter.Fill(this.cleanerDataSet.Product);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cleanerDataSet.Category". При необходимости она может быть перемещена или удалена.
+            this.categoryTableAdapter.Fill(this.cleanerDataSet.Category);
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = -1;
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace ChimChi
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,9 +79,20 @@ namespace ChimChi
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
+            this.cleanerDataSet = new ChimChi.CleanerDataSet();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new ChimChi.CleanerDataSetTableAdapters.CategoryTableAdapter();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter = new ChimChi.CleanerDataSetTableAdapters.ProductTableAdapter();
+            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceTableAdapter = new ChimChi.CleanerDataSetTableAdapters.ServiceTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cleanerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -221,30 +233,39 @@ namespace ChimChi
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.categoryBindingSource;
+            this.comboBox1.DisplayMember = "Category";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(32, 212);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(295, 28);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "Id_Category";
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.productBindingSource;
+            this.comboBox2.DisplayMember = "Product";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(406, 212);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(295, 28);
             this.comboBox2.TabIndex = 2;
+            this.comboBox2.ValueMember = "Id_Product";
             // 
             // comboBox3
             // 
+            this.comboBox3.DataSource = this.serviceBindingSource;
+            this.comboBox3.DisplayMember = "Service";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(778, 212);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(295, 28);
             this.comboBox3.TabIndex = 2;
+            this.comboBox3.ValueMember = "Id_Service";
             // 
             // label10
             // 
@@ -554,6 +575,7 @@ namespace ChimChi
             this.button4.TabIndex = 17;
             this.button4.Text = "Очистить";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -576,6 +598,38 @@ namespace ChimChi
             this.label21.Size = new System.Drawing.Size(48, 25);
             this.label21.TabIndex = 18;
             this.label21.Text = "руб.";
+            // 
+            // cleanerDataSet
+            // 
+            this.cleanerDataSet.DataSetName = "CleanerDataSet";
+            this.cleanerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataMember = "Category";
+            this.categoryBindingSource.DataSource = this.cleanerDataSet;
+            // 
+            // categoryTableAdapter
+            // 
+            this.categoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.cleanerDataSet;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // serviceBindingSource
+            // 
+            this.serviceBindingSource.DataMember = "Service";
+            this.serviceBindingSource.DataSource = this.cleanerDataSet;
+            // 
+            // serviceTableAdapter
+            // 
+            this.serviceTableAdapter.ClearBeforeFill = true;
             // 
             // NewOrder
             // 
@@ -626,10 +680,15 @@ namespace ChimChi
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NewOrder";
             this.Text = "Новый заказ";
+            this.Load += new System.EventHandler(this.NewOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cleanerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,5 +745,12 @@ namespace ChimChi
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label21;
+        private CleanerDataSet cleanerDataSet;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private CleanerDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private CleanerDataSetTableAdapters.ProductTableAdapter productTableAdapter;
+        private System.Windows.Forms.BindingSource serviceBindingSource;
+        private CleanerDataSetTableAdapters.ServiceTableAdapter serviceTableAdapter;
     }
 }
