@@ -21,14 +21,16 @@ namespace ChimChi
 
         private void btnAuth_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
+            
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Антон\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT RealName FROM Login WHERE Username='" + txtLogin.Text + "' AND Password='" + txtPass.Text + "' ", connection);
+            
             DataTable table = new DataTable();
-            DataSet data = new DataSet();
-            adapter.Fill(data);
+            
             adapter.Fill(table);
 
-            realName = "Пользователь";
+            object[] login = table.Rows[0].ItemArray;
+            realName = login[0].ToString();
 
             if (table.Rows.Count == 1)
             {

@@ -20,7 +20,7 @@ namespace ChimChi
         }
         
         DataSet set = new DataSet();
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toxa_\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Антон\Source\Repos\Cleaner\Cleaner.mdf;Integrated Security=True");
         string com = (@"SELECT * FROM [Order]");     //команда для выбора заказов
         
 
