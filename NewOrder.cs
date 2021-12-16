@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ChimChi
 {
@@ -69,6 +70,8 @@ namespace ChimChi
         private void button4_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
         }
     }
 }
