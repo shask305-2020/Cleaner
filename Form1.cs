@@ -35,7 +35,7 @@ namespace ChimChi
             if (table.Rows.Count == 1)
             {
                 MessageBox.Show("Добро пожаловать, " + realName);
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(realName);
                 mainForm.Show();
                 this.Hide();
             }

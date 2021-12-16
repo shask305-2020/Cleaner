@@ -12,10 +12,14 @@ namespace ChimChi
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(string data)
         {
             InitializeComponent();
+            this.data = data;
+            UserName.Text = data;
         }
+
+        string data;
 
         private void btnExit1_Click(object sender, EventArgs e)
         {
